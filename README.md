@@ -10,10 +10,10 @@ The encoder maps an input sequence $$\(\mathbf{X} = (x_1, x_2, \dots, x_T)\) of 
 
 #### **Input Transformation**
 1. **Embedding Layer**:
-   \[
+   $$\[
    \mathbf{E}_t = \text{Embedding}(x_t), \quad \mathbf{E}_t \in \mathbb{R}^{d_{\text{emb}}}
-   \]
-   where \(x_t\) is the integer token at timestep \(t\), and \(d_{\text{emb}}\) is the dimensionality of the embedding vector.
+   \]$$
+   $$where \(x_t\) is the integer token at timestep \(t\), and \(d_{\text{emb}}\)$$ is the dimensionality of the embedding vector.
 
 2. **LSTM Layer**:
    The embedded sequence \((\mathbf{E}_1, \mathbf{E}_2, \dots, \mathbf{E}_T)\) is passed into an LSTM:
