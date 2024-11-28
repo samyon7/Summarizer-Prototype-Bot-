@@ -10,12 +10,14 @@ The encoder maps an input sequence $$\(\mathbf{X} = (x_1, x_2, \dots, x_T)\) of 
 
 #### **Input Transformation**
 1. **Embedding Layer**:
-   $$\[
+   $$
+   \[
    \mathbf{E}_t = \text{Embedding}(x_t), \quad \mathbf{E}_t \in \mathbb{R}^{d_{\text{emb}}}
-   \]$$
+   \]
+   $$
    $$where \(x_t\) is the integer token at timestep \(t\), and \(d_{\text{emb}}\)$$ is the dimensionality of the embedding vector.
 
-2. **LSTM Layer**:
+3. **LSTM Layer**:
    The embedded sequence \((\mathbf{E}_1, \mathbf{E}_2, \dots, \mathbf{E}_T)\) is passed into an LSTM:
    \[
    (\mathbf{h}_t, \mathbf{c}_t) = \text{LSTM}(\mathbf{E}_t, (\mathbf{h}_{t-1}, \mathbf{c}_{t-1}))
@@ -25,7 +27,7 @@ The encoder maps an input sequence $$\(\mathbf{X} = (x_1, x_2, \dots, x_T)\) of 
    - \(\mathbf{c}_t \in \mathbb{R}^{d_{\text{hidden}}}\) is the cell state at timestep \(t\),
    - \(d_{\text{hidden}}\) is the dimensionality of the hidden and cell states.
 
-3. **Output**:
+4. **Output**:
    At the final timestep \(T\), the encoder outputs the hidden and cell states:
    \[
    (\mathbf{h}_T, \mathbf{c}_T)
