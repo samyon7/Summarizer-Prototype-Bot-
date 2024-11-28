@@ -6,7 +6,7 @@ The provided code implements a sequence-to-sequence (Seq2Seq) model using an enc
 
 ### **1. Encoder**
 
-The encoder maps an input sequence \(\mathbf{X} = (x_1, x_2, \dots, x_T)\) of length \(T\) into a context vector containing hidden states that summarize the sequence.
+The encoder maps an input sequence $$\(\mathbf{X} = (x_1, x_2, \dots, x_T)\) of length \(T\)$$ into a context vector containing hidden states that summarize the sequence.
 
 #### **Input Transformation**
 1. **Embedding Layer**:
